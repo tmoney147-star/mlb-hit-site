@@ -24,12 +24,13 @@
                 <div class="filter-controls">
                     <h3>Filters</h3>
                     <label for="team-filter">Team:</label>
-                    <select id="team-filter">
+                    <select id="team-filter" aria-label="Select a team">
                         <option value="all">All Teams</option>
+                        <!-- Add more team options here -->
                     </select>
                     <label for="min-score">Minimum Score:</label>
-                    <input type="number" id="min-score" min="0" max="20" value="0">
-                    <button id="refresh-btn">Refresh Data</button>
+                    <input type="number" id="min-score" min="0" max="20" value="0" aria-label="Minimum score">
+                    <button id="refresh-btn" aria-label="Refresh data">Refresh Data</button>
                 </div>
                 <div class="best-bets">
                     <h2>🔥 Today's Best Bets</h2>
