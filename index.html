@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Hit Probability Scores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MLB Hit Probability Scores</h1>
+            <div class="scoring-system">
+                <h3>Scoring System</h3>
+                <p>AVG > .300 (+4 pts) | AVG > .270 (+3 pts) | AVG > .250 (+2 pts)</p>
+                <p>OBP > .350 (+2 pts) | SLG > .450 (+2 pts) | OPS > .800 (+2 pts)</p>
+                <p>SB > 5 (+1 pt) | SO < 50 (+2 pts)</p>
+                <p>Park Factor adjustment applied (1.1 for hitter-friendly parks, 0.9 for pitcher-friendly parks)</p>
+            </div>
+        </header>
+        <div class="content">
+            <div class="controls">
+                <div class="filter-controls">
+                    <h3>Filters</h3>
+                    <label for="team-filter">Team:</label>
+                    <select id="team-filter">
+                        <option value="all">All Teams</option>
+                    </select>
+                    <label for="min-score">Minimum Score:</label>
+                    <input type="number" id="min-score" min="0" max="20" value="0">
+                    <button id="refresh-btn">Refresh Data</button>
+                </div>
+                <div class="best-bets">
+                    <h2>🔥 Today's Best Bets</h2>
+                    <div id="best-bets-content"></div>
+                </div>
+            </div>
+            <div class="players-container">
+                <div id="players-loading" class="loading">Loading player data...</div>
+                <div id="players-error" class="error" style="display: none;"></div>
+                <div id="players-grid" class="players-grid" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
